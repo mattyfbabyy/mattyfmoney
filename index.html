@@ -8,110 +8,139 @@
 <title>Matty F Money | Real advice. Better decisions.</title>
 <meta name="description" content="Life insurance, explained clearly. Book a free 15-minute call with Matt Friedman in Chicago.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --green:#0E6234;
     --green-dark:#0A4525;
+    --green-deep:#062E18;
     --green-tint:#EEF4EF;
+    --green-tint-2:#E1ECE4;
     --black:#111111;
     --text:#2A2E2B;
     --muted:#5E655F;
-    --line:#D9DED9;
+    --line:#DDE3DE;
     --bg:#FFFFFF;
-    --col:720px;
+    --col:760px;
     --pad:24px;
+    --shadow:0 1px 2px rgba(17,17,17,.05),0 10px 30px -12px rgba(14,98,52,.22);
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
   body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
-  h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;font-weight:600;color:var(--black);margin:0;line-height:1.15;letter-spacing:-.01em}
+  h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;font-weight:600;color:var(--black);margin:0;line-height:1.15;letter-spacing:-.012em}
   p{margin:0}
   a{color:var(--green)}
   .wrap{max-width:var(--col);margin:0 auto;padding:0 var(--pad)}
   :focus-visible{outline:2px solid var(--green);outline-offset:3px}
 
-  .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--green);color:#fff;text-decoration:none;font-weight:600;font-size:16px;padding:15px 26px;border-radius:6px;border:1px solid var(--green);width:100%}
-  .btn:hover{background:var(--green-dark);border-color:var(--green-dark)}
-  .btn-outline{background:transparent;color:var(--green)}
-  .btn-outline:hover{background:var(--green-tint)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--green);color:#fff;text-decoration:none;font-weight:600;font-size:16px;padding:16px 28px;border-radius:8px;border:1px solid var(--green);width:100%;box-shadow:0 6px 18px -8px rgba(14,98,52,.6);transition:background .15s,transform .15s,box-shadow .15s}
+  .btn:hover{background:var(--green-dark);border-color:var(--green-dark);transform:translateY(-1px);box-shadow:0 10px 22px -8px rgba(14,98,52,.6)}
+  .btn-outline{background:#fff;color:var(--green);box-shadow:none}
+  .btn-outline:hover{background:var(--green-tint);transform:none;box-shadow:none}
 
-  header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
-  header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .logo{display:block;height:44px;width:auto}
-  header .cta{color:var(--green);text-decoration:none;font-weight:600;font-size:15px}
+  header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:saturate(1.3) blur(8px);border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
+  header .logo{display:block;height:58px;width:auto}
+  header .btn{width:auto;padding:11px 18px;font-size:14px;border-radius:7px;white-space:nowrap}
 
-  .hero{padding:56px 0 48px;border-bottom:1px solid var(--line)}
-  .hero h1{font-size:clamp(34px,7.5vw,50px);max-width:16ch}
-  .hero .sub{margin:20px 0 28px;font-size:19px;color:var(--text);max-width:42ch}
-  .hero .row{display:flex;flex-direction:column;gap:12px}
-  .hero .fine{margin-top:18px;font-size:14px;color:var(--muted)}
+  /* hero */
+  .hero{position:relative;overflow:hidden;padding:64px 0 60px;text-align:center;background:linear-gradient(180deg,#FFFFFF 0%,var(--green-tint) 100%);border-bottom:1px solid var(--line)}
+  .hero::before{content:"";position:absolute;inset:auto -20% -60% -20%;height:70%;background:radial-gradient(closest-side,rgba(14,98,52,.10),transparent 70%);pointer-events:none}
+  .hero .wrap{position:relative}
+  .hero h1{font-size:clamp(38px,9vw,62px);line-height:1.1;margin:0 auto;max-width:18ch}
+  .hero h1 .g{color:var(--green)}
+  .hero h1 .u{position:relative;display:inline-block;white-space:nowrap}
+  .hero h1 .u svg{position:absolute;left:-2%;right:-2%;bottom:-.16em;width:104%;height:.36em;overflow:visible;pointer-events:none}
+  .hero .sub{margin:24px auto 32px;font-size:19px;color:var(--text);max-width:44ch}
+  .hero .row{display:flex;flex-direction:column;gap:12px;max-width:440px;margin:0 auto}
+  .hero .fine{margin-top:20px;font-size:14px;color:var(--muted)}
 
-  section{padding:56px 0;border-bottom:1px solid var(--line)}
-  h2{font-size:clamp(28px,6vw,36px);margin-bottom:10px}
-  .lead{color:var(--muted);font-size:17px;margin-bottom:28px;max-width:46ch}
+  section{padding:64px 0}
+  .h{display:inline-block;margin-bottom:14px}
+  .h::after{content:"";display:block;width:44px;height:3px;background:var(--green);margin-top:12px;border-radius:2px}
+  h2{font-size:clamp(30px,6vw,40px)}
+  .lead{color:var(--muted);font-size:17px;margin-bottom:30px;max-width:48ch}
 
-  .items{display:grid;gap:22px}
-  .item{padding-left:18px;border-left:3px solid var(--green)}
-  .item h3{font-size:21px;margin-bottom:6px}
+  /* what */
+  .items{display:grid;gap:16px}
+  .item{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px 24px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+  .item::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--green)}
+  .item h3{font-size:22px;margin-bottom:8px}
 
-  .who{background:var(--green-tint)}
-  .who ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
-  .who li{padding-left:24px;position:relative}
-  .who li::before{content:"";position:absolute;left:0;top:11px;width:10px;height:10px;border-radius:50%;background:var(--green)}
-  .who .not{margin-top:26px;padding-top:22px;border-top:1px solid #C9D3CB;color:var(--muted)}
-  .who .not b{color:var(--black);font-weight:600}
+  /* who */
+  .who{background:var(--green-deep);color:#fff;position:relative;overflow:hidden}
+  .who::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.08),transparent);pointer-events:none}
+  .who h2{color:#fff}.who .h::after{background:#8FCF9F}
+  .who .lead{color:rgba(255,255,255,.72)}
+  .who ul{list-style:none;padding:0;margin:0;display:grid;gap:12px;position:relative}
+  .who li{padding:14px 16px 14px 44px;position:relative;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;font-weight:500}
+  .who li::before{content:"";position:absolute;left:16px;top:20px;width:14px;height:14px;border-radius:50%;background:#8FCF9F;box-shadow:0 0 0 4px rgba(143,207,159,.2)}
+  .who .not{margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.72)}
+  .who .not b{color:#fff;font-weight:600}
 
-  .steps{list-style:none;padding:0;margin:0;display:grid;gap:22px;counter-reset:s}
-  .steps li{display:grid;grid-template-columns:40px 1fr;gap:16px;align-items:start}
-  .steps .n{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--green);color:var(--green);display:grid;place-items:center;font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:19px}
-  .steps h3{font-size:21px;margin-bottom:4px}
-  .steps .t{display:block;margin-top:6px;font-size:14px;color:var(--muted)}
+  /* how */
+  .how{background:var(--green-tint)}
+  .steps{list-style:none;padding:0;margin:0;display:grid;gap:16px}
+  .steps li{display:grid;grid-template-columns:48px 1fr;gap:18px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px;box-shadow:var(--shadow)}
+  .steps .n{width:48px;height:48px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:22px}
+  .steps h3{font-size:22px;margin-bottom:4px}
+  .steps .t{display:inline-block;margin-top:10px;font-size:13px;font-weight:600;color:var(--green);background:var(--green-tint);padding:4px 10px;border-radius:999px}
 
-  .faq details{border-top:1px solid var(--line)}
-  .faq details:last-of-type{border-bottom:1px solid var(--line)}
-  .faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:19px;color:var(--black);line-height:1.3}
+  /* FAQ */
+  .faq details{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:10px;transition:box-shadow .15s}
+  .faq details[open]{box-shadow:var(--shadow);border-color:#C6D6CB}
+  .faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 20px;font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:19px;color:var(--black);line-height:1.3}
   .faq summary::-webkit-details-marker{display:none}
-  .faq summary::after{content:"+";flex:none;color:var(--green);font-family:Inter,sans-serif;font-weight:400;font-size:24px;transition:transform .2s}
+  .faq summary::after{content:"+";flex:none;width:30px;height:30px;border-radius:50%;background:var(--green-tint);color:var(--green);display:grid;place-items:center;font-family:Inter,sans-serif;font-size:22px;transition:transform .2s}
   .faq details[open] summary::after{transform:rotate(45deg)}
-  .faq .body{padding:0 0 20px;max-width:60ch}
+  .faq .body{padding:0 20px 20px;max-width:60ch}
   .faq .body p+p{margin-top:10px}
 
-  .about{display:grid;gap:22px}
-  .about .photo{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:6px;display:block}
+  /* about */
+  .about-s{background:var(--green-tint)}
+  .about{display:grid;gap:24px}
+  .about .photo{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:12px;display:block;box-shadow:0 20px 40px -20px rgba(6,46,24,.45)}
   .about p+p{margin-top:12px}
-  .about .more{font-weight:600}
-  .about .tag{margin-top:22px;font-family:"Source Serif 4",Georgia,serif;font-size:21px;color:var(--green);font-style:italic}
-  .socials{margin-top:24px;display:flex;gap:14px}
-  .socials a{font-size:15px;font-weight:600;text-decoration:none}
+  .about .row{display:flex;gap:12px;margin-top:22px;align-items:stretch}
+  .about .row .btn{width:auto;flex:1;padding:14px 18px;font-size:15px}
+  .about .ig{flex:none;width:54px;padding:0;display:inline-grid;place-items:center;background:#fff;border:1px solid var(--line);border-radius:8px;text-decoration:none;color:var(--green);font-weight:600;overflow:hidden}
+  .about .ig:hover{background:var(--green-tint)}
+  .about .ig img{width:30px;height:30px;object-fit:contain;display:block}
+  .about .ig img+span{display:none}
+  .about .tag{margin-top:24px;font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-size:23px;color:var(--green);padding-left:16px;border-left:3px solid var(--green)}
 
-  .book{background:var(--green);color:#fff;border-bottom:0}
+  /* book */
+  .book{background:linear-gradient(160deg,var(--green) 0%,var(--green-deep) 100%);color:#fff;text-align:center}
   .book h2,.book .lead{color:#fff}
-  .book .lead{color:rgba(255,255,255,.85)}
-  .embed{border:1px dashed rgba(255,255,255,.5);border-radius:6px;padding:26px 18px;text-align:center;font-size:15px;color:rgba(255,255,255,.85);margin-bottom:16px}
-  .book .btn{background:#fff;color:var(--green);border-color:#fff}
+  .book .h::after{margin-left:auto;margin-right:auto;background:#8FCF9F}
+  .book .lead{color:rgba(255,255,255,.85);margin-left:auto;margin-right:auto}
+  .embed{border:1px dashed rgba(255,255,255,.45);border-radius:10px;padding:28px 18px;font-size:15px;color:rgba(255,255,255,.85);margin-bottom:18px}
+  .book .btn{background:#fff;color:var(--green);border-color:#fff;box-shadow:0 10px 24px -10px rgba(0,0,0,.5)}
   .book .btn:hover{background:var(--green-tint)}
 
-  footer{background:var(--black);color:rgba(255,255,255,.65);font-size:13px;line-height:1.6;padding:36px 0 112px}
-  footer .logo{height:36px;margin-bottom:22px;opacity:.9}
-  footer p+p{margin-top:12px}
-  footer .ph{border:1px dashed rgba(255,255,255,.35);border-radius:6px;padding:12px 14px;color:rgba(255,255,255,.85)}
+  footer{background:var(--black);color:rgba(255,255,255,.62);font-size:13px;line-height:1.6;padding:44px 0 112px;text-align:center}
+  footer .logo{display:block;height:64px;width:auto;margin:0 auto 28px}
+  footer p+p{margin-top:14px}
+  footer .ph{border:1px dashed rgba(255,255,255,.35);border-radius:8px;padding:12px 14px;color:rgba(255,255,255,.85);text-align:left}
   footer a{color:rgba(255,255,255,.85)}
 
-  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px var(--pad) calc(12px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line)}
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px var(--pad) calc(12px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
   .sticky .btn{max-width:var(--col);margin:0 auto}
 
   @media (min-width:720px){
     .sticky{display:none}
-    footer{padding-bottom:40px}
-    .hero{padding:88px 0 72px}
-    .hero .row{flex-direction:row}.hero .row .btn{width:auto;min-width:220px}
-    section{padding:72px 0}
-    .items{grid-template-columns:repeat(3,1fr);gap:28px}
-    .item{padding-left:0;padding-top:16px;border-left:0;border-top:3px solid var(--green)}
-    .who ul{grid-template-columns:1fr 1fr;gap:12px 28px}
-    .book .btn{width:auto;min-width:260px}
+    footer{padding-bottom:48px}
+    footer .logo{height:80px}
+    header .wrap{height:96px}header .logo{height:68px}header .btn{padding:13px 22px;font-size:15px}
+    .hero{padding:104px 0 96px}
+    .hero .row{flex-direction:row;max-width:none;justify-content:center}.hero .row .btn{width:auto;min-width:240px}
+    section{padding:84px 0}
+    .items{grid-template-columns:repeat(3,1fr);gap:20px}
+    .who ul{grid-template-columns:1fr 1fr;gap:12px 14px}
+    .about{grid-template-columns:1fr}
+    .book .btn{width:auto;min-width:280px}
   }
 </style>
 </head>
@@ -120,7 +149,7 @@
 <header>
   <div class="wrap">
     <a href="#top" aria-label="Matty F Money home"><img class="logo" src="/assets/logo.png" alt="Matty F Money"></a>
-    <a class="cta" href="#book">Book a 15-minute call</a>
+    <a class="btn" href="#book">Book a 15-min call</a>
   </div>
 </header>
 
@@ -128,7 +157,7 @@
 
   <section class="hero">
     <div class="wrap">
-      <h1>If something happened to you tomorrow, would the people you love be okay?</h1>
+      <h1>If something happened to you tomorrow, <span class="g">would the people you love <span class="u">be okay?<svg viewBox="0 0 200 22" preserveAspectRatio="none" aria-hidden="true"><path d="M3 15 C 30 9, 62 13, 96 10 S 160 6, 197 11" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round"/><path d="M6 17 C 40 14, 90 16, 130 13 S 175 11, 194 14" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" opacity=".85"/></svg></span></span></h1>
       <p class="sub">That's the whole question. Fifteen minutes, and we answer it together. No pitch, no pressure, no homework.</p>
       <div class="row">
         <a class="btn" href="#book">Book a free 15-minute call</a>
@@ -140,7 +169,7 @@
 
   <section id="what">
     <div class="wrap">
-      <h2>What I do</h2>
+      <div class="h"><h2>What I do</h2></div>
       <p class="lead">Three things. One conversation. You bring the questions, I bring the answers.</p>
       <div class="items">
         <div class="item">
@@ -161,7 +190,7 @@
 
   <section class="who" id="who">
     <div class="wrap">
-      <h2>Who this is for</h2>
+      <div class="h"><h2>Who this is for</h2></div>
       <p class="lead">If any of these sound like you, we should talk.</p>
       <ul>
         <li>New parents with nothing set up yet</li>
@@ -171,15 +200,15 @@
         <li>People whose only coverage is through work</li>
         <li>Couples where one income carries the household</li>
         <li>Self-employed and 1099 earners</li>
-        <li>Anyone who's been told they're too young to think about this</li>
+        <li>Anyone told they're too young to think about this</li>
       </ul>
       <p class="not"><b>Not for you if</b> you want someone to tell you what to buy in a DM without knowing anything about you. I don't work that way, and you shouldn't want me to.</p>
     </div>
   </section>
 
-  <section id="how">
+  <section class="how" id="how">
     <div class="wrap">
-      <h2>How it works</h2>
+      <div class="h"><h2>How it works</h2></div>
       <p class="lead">Three steps. The first one is fifteen minutes, by phone or video.</p>
       <ol class="steps">
         <li><div class="n">1</div><div><h3>We talk</h3><p>Where you are, who depends on you, what's on your mind. I'll give you a straight read on what matters and what can wait.</p><span class="t">15 minutes</span></div></li>
@@ -191,7 +220,7 @@
 
   <section class="faq" id="faq">
     <div class="wrap">
-      <h2>Questions I get every week</h2>
+      <div class="h"><h2>Questions I get every week</h2></div>
       <p class="lead">Straight answers, no runaround.</p>
 
       <details><summary>Do I actually need life insurance?</summary><div class="body">
@@ -226,26 +255,26 @@
     </div>
   </section>
 
-  <section id="about">
+  <section class="about-s" id="about">
     <div class="wrap">
-      <h2>About Matt</h2>
+      <div class="h"><h2>About Matt</h2></div>
       <div class="about">
-        <img class="photo" src="/assets/matty.jpg" alt="Matt Friedman" onerror="this.style.display='none'">
+        <img class="photo" src="/assets/matty.jpg" alt="Matt Friedman">
         <div>
           <p>Twenty years in sales. The last ten building a luxury rental business in Chicago, which I'm still building. Now I'm joining my dad's 25-year financial practice with the plan to take it over, because helping a family protect what they have beats helping them find a nicer kitchen.</p>
-          <p><a class="more" href="https://mattyv3rse.com" target="_blank" rel="noopener">The full story lives at mattyv3rse.com</a></p>
+          <div class="row">
+            <a class="btn" href="https://mattyv3rse.com" target="_blank" rel="noopener">The full story at mattyv3rse.com</a>
+            <a class="ig" href="https://www.instagram.com/mattyfmoney" target="_blank" rel="noopener" aria-label="Matty F Money on Instagram" title="@mattyfmoney"><img src="/assets/instagram.png" alt="" onerror="this.remove()"><span>IG</span></a>
+          </div>
           <p class="tag">Real advice. Better decisions.</p>
         </div>
-      </div>
-      <div class="socials" aria-label="Social links">
-        <a href="https://www.instagram.com/mattyfmoney" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
   </section>
 
   <section class="book" id="book">
     <div class="wrap">
-      <h2>Book your 15-minute call</h2>
+      <div class="h"><h2>Book your 15-minute call</h2></div>
       <p class="lead">Pick a time. Phone or video, your choice. You'll leave with your number and your next step.</p>
       <div class="embed">Scheduler embed goes here (firm-approved booking tool).</div>
       <a class="btn" href="#">Book a free 15-minute call</a>
