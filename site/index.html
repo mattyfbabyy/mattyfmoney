@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<meta name="robots" content="noindex, nofollow">
+<title>Matty F Money | Real advice. Better decisions.</title>
+<meta name="description" content="Life insurance, explained clearly. Book a free 15-minute call with Matt Friedman in Chicago.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#0E6234;
+    --green-dark:#0A4525;
+    --green-tint:#EEF4EF;
+    --black:#111111;
+    --text:#2A2E2B;
+    --muted:#5E655F;
+    --line:#D9DED9;
+    --bg:#FFFFFF;
+    --col:720px;
+    --pad:24px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;font-weight:600;color:var(--black);margin:0;line-height:1.15;letter-spacing:-.01em}
+  p{margin:0}
+  a{color:var(--green)}
+  .wrap{max-width:var(--col);margin:0 auto;padding:0 var(--pad)}
+  :focus-visible{outline:2px solid var(--green);outline-offset:3px}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--green);color:#fff;text-decoration:none;font-weight:600;font-size:16px;padding:15px 26px;border-radius:6px;border:1px solid var(--green);width:100%}
+  .btn:hover{background:var(--green-dark);border-color:var(--green-dark)}
+  .btn-outline{background:transparent;color:var(--green)}
+  .btn-outline:hover{background:var(--green-tint)}
+
+  header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{display:block;height:44px;width:auto}
+  header .cta{color:var(--green);text-decoration:none;font-weight:600;font-size:15px}
+
+  .hero{padding:56px 0 48px;border-bottom:1px solid var(--line)}
+  .hero h1{font-size:clamp(34px,7.5vw,50px);max-width:16ch}
+  .hero .sub{margin:20px 0 28px;font-size:19px;color:var(--text);max-width:42ch}
+  .hero .row{display:flex;flex-direction:column;gap:12px}
+  .hero .fine{margin-top:18px;font-size:14px;color:var(--muted)}
+
+  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:clamp(28px,6vw,36px);margin-bottom:10px}
+  .lead{color:var(--muted);font-size:17px;margin-bottom:28px;max-width:46ch}
+
+  .items{display:grid;gap:22px}
+  .item{padding-left:18px;border-left:3px solid var(--green)}
+  .item h3{font-size:21px;margin-bottom:6px}
+
+  .who{background:var(--green-tint)}
+  .who ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+  .who li{padding-left:24px;position:relative}
+  .who li::before{content:"";position:absolute;left:0;top:11px;width:10px;height:10px;border-radius:50%;background:var(--green)}
+  .who .not{margin-top:26px;padding-top:22px;border-top:1px solid #C9D3CB;color:var(--muted)}
+  .who .not b{color:var(--black);font-weight:600}
+
+  .steps{list-style:none;padding:0;margin:0;display:grid;gap:22px;counter-reset:s}
+  .steps li{display:grid;grid-template-columns:40px 1fr;gap:16px;align-items:start}
+  .steps .n{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--green);color:var(--green);display:grid;place-items:center;font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:19px}
+  .steps h3{font-size:21px;margin-bottom:4px}
+  .steps .t{display:block;margin-top:6px;font-size:14px;color:var(--muted)}
+
+  .faq details{border-top:1px solid var(--line)}
+  .faq details:last-of-type{border-bottom:1px solid var(--line)}
+  .faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:19px;color:var(--black);line-height:1.3}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";flex:none;color:var(--green);font-family:Inter,sans-serif;font-weight:400;font-size:24px;transition:transform .2s}
+  .faq details[open] summary::after{transform:rotate(45deg)}
+  .faq .body{padding:0 0 20px;max-width:60ch}
+  .faq .body p+p{margin-top:10px}
+
+  .about{display:grid;gap:22px}
+  .about .photo{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:6px;display:block}
+  .about p+p{margin-top:12px}
+  .about .more{font-weight:600}
+  .about .tag{margin-top:22px;font-family:"Source Serif 4",Georgia,serif;font-size:21px;color:var(--green);font-style:italic}
+  .socials{margin-top:24px;display:flex;gap:14px}
+  .socials a{font-size:15px;font-weight:600;text-decoration:none}
+
+  .book{background:var(--green);color:#fff;border-bottom:0}
+  .book h2,.book .lead{color:#fff}
+  .book .lead{color:rgba(255,255,255,.85)}
+  .embed{border:1px dashed rgba(255,255,255,.5);border-radius:6px;padding:26px 18px;text-align:center;font-size:15px;color:rgba(255,255,255,.85);margin-bottom:16px}
+  .book .btn{background:#fff;color:var(--green);border-color:#fff}
+  .book .btn:hover{background:var(--green-tint)}
+
+  footer{background:var(--black);color:rgba(255,255,255,.65);font-size:13px;line-height:1.6;padding:36px 0 112px}
+  footer .logo{height:36px;margin-bottom:22px;opacity:.9}
+  footer p+p{margin-top:12px}
+  footer .ph{border:1px dashed rgba(255,255,255,.35);border-radius:6px;padding:12px 14px;color:rgba(255,255,255,.85)}
+  footer a{color:rgba(255,255,255,.85)}
+
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px var(--pad) calc(12px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line)}
+  .sticky .btn{max-width:var(--col);margin:0 auto}
+
+  @media (min-width:720px){
+    .sticky{display:none}
+    footer{padding-bottom:40px}
+    .hero{padding:88px 0 72px}
+    .hero .row{flex-direction:row}.hero .row .btn{width:auto;min-width:220px}
+    section{padding:72px 0}
+    .items{grid-template-columns:repeat(3,1fr);gap:28px}
+    .item{padding-left:0;padding-top:16px;border-left:0;border-top:3px solid var(--green)}
+    .who ul{grid-template-columns:1fr 1fr;gap:12px 28px}
+    .book .btn{width:auto;min-width:260px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="#top" aria-label="Matty F Money home"><img class="logo" src="/assets/logo.png" alt="Matty F Money"></a>
+    <a class="cta" href="#book">Book a 15-minute call</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>If something happened to you tomorrow, would the people you love be okay?</h1>
+      <p class="sub">That's the whole question. Fifteen minutes, and we answer it together. No pitch, no pressure, no homework.</p>
+      <div class="row">
+        <a class="btn" href="#book">Book a free 15-minute call</a>
+        <a class="btn btn-outline" href="#faq">Read the questions first</a>
+      </div>
+      <p class="fine">Whether or not you ever work with me, you leave the call knowing more than you did before it.</p>
+    </div>
+  </section>
+
+  <section id="what">
+    <div class="wrap">
+      <h2>What I do</h2>
+      <p class="lead">Three things. One conversation. You bring the questions, I bring the answers.</p>
+      <div class="items">
+        <div class="item">
+          <h3>Find your real number</h3>
+          <p>Not a rule of thumb. What your income would need to replace, for how long, and what you'd want paid off.</p>
+        </div>
+        <div class="item">
+          <h3>Choose the right coverage</h3>
+          <p>Term, whole life, or a mix. How each one works, what it costs, and what it does for you while you're alive, not just after.</p>
+        </div>
+        <div class="item">
+          <h3>Set it up properly</h3>
+          <p>I handle the application and the paperwork. You get a policy that fits, a beneficiary that's correct, and a check-in when life changes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="who" id="who">
+    <div class="wrap">
+      <h2>Who this is for</h2>
+      <p class="lead">If any of these sound like you, we should talk.</p>
+      <ul>
+        <li>New parents with nothing set up yet</li>
+        <li>Renters who assume this isn't for them</li>
+        <li>People earning well and still winging it</li>
+        <li>Anyone who just bought a place</li>
+        <li>People whose only coverage is through work</li>
+        <li>Couples where one income carries the household</li>
+        <li>Self-employed and 1099 earners</li>
+        <li>Anyone who's been told they're too young to think about this</li>
+      </ul>
+      <p class="not"><b>Not for you if</b> you want someone to tell you what to buy in a DM without knowing anything about you. I don't work that way, and you shouldn't want me to.</p>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="lead">Three steps. The first one is fifteen minutes, by phone or video.</p>
+      <ol class="steps">
+        <li><div class="n">1</div><div><h3>We talk</h3><p>Where you are, who depends on you, what's on your mind. I'll give you a straight read on what matters and what can wait.</p><span class="t">15 minutes</span></div></li>
+        <li><div class="n">2</div><div><h3>I build the picture</h3><p>Your number, two or three real options side by side, and the monthly cost of each. On one page.</p><span class="t">A few days</span></div></li>
+        <li><div class="n">3</div><div><h3>We set it up</h3><p>You choose. I handle the application. We check in once a year or whenever something big changes.</p><span class="t">Done</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <h2>Questions I get every week</h2>
+      <p class="lead">Straight answers, no runaround.</p>
+
+      <details><summary>Do I actually need life insurance?</summary><div class="body">
+        <p>If someone would be in a worse spot financially if your income stopped, yes. A partner, kids, a parent you help, a co-signer on a loan. If nobody depends on you, you may not need it yet, and I'll tell you that.</p>
+      </div></details>
+      <details><summary>Term vs. whole life. What's the difference?</summary><div class="body">
+        <p>Term covers you for a set number of years and then ends. Simple, affordable, does one job. Whole life covers you for life and can build cash value you may be able to use along the way. It costs more because it does more.</p>
+        <p>Many people end up with some of each. The mix depends on your age, your family, and what you want the money to do.</p>
+      </div></details>
+      <details><summary>How much coverage do I need?</summary><div class="body">
+        <p>Start with your income, how many years it would need to be replaced, and what you'd want paid off. That gives a real number. "Ten times your salary" is a starting point, not an answer. Two people with the same salary can need very different amounts.</p>
+        <p><a href="#book">We'll work out your number on the call.</a></p>
+      </div></details>
+      <details><summary>I have coverage through work. Isn't that enough?</summary><div class="body">
+        <p>Often not. Group coverage is frequently one or two times salary, and it typically ends when the job does. It's a nice benefit, not a plan.</p>
+      </div></details>
+      <details><summary>What is cash value?</summary><div class="body">
+        <p>The part of a permanent policy that can grow over time and belongs to you. You may be able to borrow against it or use it while you're alive. It's a long game and it isn't the right tool for everyone. Anyone who tells you it always is, or never is, isn't giving you the full picture.</p>
+      </div></details>
+      <details><summary>I rent. Does this apply to me?</summary><div class="body">
+        <p>Yes. Coverage isn't about owning a home. It's about who depends on your income. If someone does, this applies.</p>
+      </div></details>
+      <details><summary>Am I too young to think about this?</summary><div class="body">
+        <p>Coverage is priced on age and health. The younger and healthier you are when you set it up, the less it generally costs, and you lock that in. Waiting rarely makes it cheaper.</p>
+      </div></details>
+      <details><summary>What does it cost to work with you?</summary><div class="body">
+        <p>The call is free. If you set up a policy, I'm paid by the insurance company, not by you writing me a check. I'll explain exactly how that works before you decide anything.</p>
+      </div></details>
+      <details><summary>Will you pressure me?</summary><div class="body">
+        <p>No. If the plan is right, it'll still be right next week. I spent ten years in real estate watching people get pushed into decisions. I don't do that.</p>
+      </div></details>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>About Matt</h2>
+      <div class="about">
+        <img class="photo" src="/assets/matty.jpg" alt="Matt Friedman" onerror="this.style.display='none'">
+        <div>
+          <p>Twenty years in sales. The last ten building a luxury rental business in Chicago, which I'm still building. Now I'm joining my dad's 25-year financial practice with the plan to take it over, because helping a family protect what they have beats helping them find a nicer kitchen.</p>
+          <p><a class="more" href="https://mattyv3rse.com" target="_blank" rel="noopener">The full story lives at mattyv3rse.com</a></p>
+          <p class="tag">Real advice. Better decisions.</p>
+        </div>
+      </div>
+      <div class="socials" aria-label="Social links">
+        <a href="https://www.instagram.com/mattyfmoney" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="book" id="book">
+    <div class="wrap">
+      <h2>Book your 15-minute call</h2>
+      <p class="lead">Pick a time. Phone or video, your choice. You'll leave with your number and your next step.</p>
+      <div class="embed">Scheduler embed goes here (firm-approved booking tool).</div>
+      <a class="btn" href="#">Book a free 15-minute call</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img class="logo" src="/assets/logo-white.png" alt="Matty F Money">
+    <p class="ph">Compliance footer placeholder: legal name, firm and agency affiliation, state insurance license numbers, required disclosures, and review code go here once approved.</p>
+    <p>Matty F Money is a personal brand. Nothing on this page is a promise about future results or an offer of any specific product. Coverage, cost, and availability depend on your situation and the carrier's underwriting. This is general information, not tax or legal advice.</p>
+    <p>&copy; 2026 Matty F Money &nbsp;&nbsp; <a href="#">Privacy</a></p>
+  </div>
+</footer>
+
+<div class="sticky"><a class="btn" href="#book">Book a free 15-minute call</a></div>
+
+</body>
+</html>
