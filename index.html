@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<meta name="robots" content="noindex, nofollow">
+<title>Matty F Money | Life insurance, explained like a human</title>
+<meta name="description" content="Life insurance and money basics in plain English. Book a free 15-minute call with Matty F.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#12B85F;        /* loud */
+    --green-deep:#0B7A3E;
+    --green-ink:#062D19;    /* near-black green */
+    --lime:#B6F57A;         /* accent */
+    --gold:#D4A94E;
+    --paper:#F4F8F2;
+    --white:#FFFFFF;
+    --ink:#0B1A12;
+    --muted:#4E6157;
+    --line:rgba(6,45,25,.14);
+    --col:680px;
+    --pad:22px;
+    --r:16px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:Figtree,system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.disp{font-family:"Bricolage Grotesque",Impact,system-ui,sans-serif;font-weight:800;line-height:.98;letter-spacing:-.025em;margin:0}
+  p{margin:0}
+  a{color:inherit}
+  .wrap{max-width:var(--col);margin:0 auto;padding:0 var(--pad)}
+  :focus-visible{outline:3px solid var(--lime);outline-offset:3px;border-radius:8px}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--green);color:var(--white);text-decoration:none;font-weight:700;font-size:17px;padding:17px 24px;border-radius:14px;border:0;width:100%;cursor:pointer;box-shadow:0 8px 0 var(--green-deep);transform:translateY(0);transition:transform .08s,box-shadow .08s}
+  .btn:active{transform:translateY(6px);box-shadow:0 2px 0 var(--green-deep)}
+  .btn-dark{background:var(--green-ink);box-shadow:0 8px 0 #000}
+  .btn-ghost{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.6);box-shadow:none}
+  .btn-ghost:active{transform:none}
+
+  /* top bar */
+  .top{position:sticky;top:0;z-index:20;background:var(--green-ink);color:var(--white)}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+  .brand{text-decoration:none;display:flex;align-items:center;gap:10px;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:18px;letter-spacing:-.02em;color:var(--white)}
+  .brand .badge{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:9px;background:var(--green);color:var(--green-ink);font-size:17px;transform:rotate(-6deg)}
+  .logo-sm{height:44px;width:auto;display:block}
+  .logo-hero{width:min(78%,360px);height:auto;display:block;margin:0 0 18px;filter:drop-shadow(0 8px 0 rgba(0,0,0,.25))}
+  .logo-ft{width:200px;height:auto;display:block;margin-bottom:18px}
+  .top .cta{background:var(--green);color:var(--white);text-decoration:none;font-weight:800;font-size:14px;padding:10px 14px;border-radius:10px;box-shadow:0 3px 0 var(--green-deep);white-space:nowrap}
+  .top .cta:active{transform:translateY(2px);box-shadow:0 1px 0 var(--green-deep)}
+
+  /* hero */
+  .hero{background:var(--green);color:var(--white);padding:40px 0 34px;position:relative;overflow:hidden}
+  .hero::after{content:"$";position:absolute;right:-30px;bottom:-70px;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:340px;line-height:1;color:rgba(255,255,255,.1);pointer-events:none}
+  .hero .wrap{position:relative}
+  .kicker{display:inline-block;background:var(--green-ink);color:var(--lime);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:12px 22px;border-radius:22px;margin-bottom:22px;text-align:center;line-height:1.5}
+  .kicker span{display:block}
+  .hero h1{font-size:clamp(42px,11.5vw,76px);text-transform:uppercase;color:var(--white);max-width:12ch}
+  .hero h1 span{color:var(--green-ink)}
+  .hero h1 .mark{font-style:normal;position:relative;display:inline-block;white-space:nowrap}
+  .hero h1 .mark::after{content:"";position:absolute;left:-2%;right:-2%;bottom:-.08em;height:.32em;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 30' preserveAspectRatio='none'><path d='M3 17 C 30 10, 60 22, 90 15 S 150 9, 197 16' fill='none' stroke='%23B6F57A' stroke-width='9' stroke-linecap='round'/><path d='M8 23 C 40 18, 80 27, 120 20 S 170 16, 192 22' fill='none' stroke='%23B6F57A' stroke-width='6' stroke-linecap='round' opacity='.85'/></svg>") no-repeat center/100% 100%;z-index:-1;pointer-events:none}
+  .hero h1 .mark{z-index:0}
+  .hero .sub{margin:22px 0 26px;font-size:19px;font-weight:500;color:rgba(255,255,255,.95);max-width:34ch}
+  .hero .row{display:flex;flex-direction:column;gap:12px}
+  .hero .row .btn{box-shadow:0 8px 0 #000}
+  .hero .fine{margin-top:16px;font-size:14px;color:rgba(255,255,255,.85)}
+
+  /* ticker */
+  .ticker{background:var(--green-ink);color:var(--lime);overflow:hidden;white-space:nowrap;padding:12px 0;border-top:3px solid var(--lime);border-bottom:3px solid var(--lime)}
+  .ticker .track{display:inline-block;animation:scroll 22s linear infinite;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:18px;letter-spacing:.02em;text-transform:uppercase}
+  .ticker .track span{padding:0 18px}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  section{padding:56px 0}
+  h2{font-size:clamp(34px,9vw,52px);text-transform:uppercase;margin-bottom:10px}
+  h2 .hl{color:var(--green)}
+  .lead{color:var(--muted);font-size:18px;margin-bottom:26px;max-width:44ch}
+
+  /* what I do */
+  .cards{display:grid;gap:14px}
+  .card{background:var(--white);border:2px solid var(--green-ink);border-radius:var(--r);padding:22px 20px;box-shadow:6px 6px 0 var(--green)}
+  .card .num{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:14px;color:var(--green);letter-spacing:.1em;margin-bottom:8px}
+  .card h3{font-size:25px;margin-bottom:8px}
+  .card p{color:#2F4038}
+
+  /* who it's for */
+  .for{background:var(--green-ink);color:var(--white)}
+  .for h2{color:var(--white)}
+  .for .lead{color:rgba(255,255,255,.7)}
+  .hint{color:var(--lime);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+  .coins{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .coin{position:relative;appearance:none;border:0;background:none;padding:0;cursor:pointer;aspect-ratio:1/1;perspective:800px;font:inherit;color:inherit}
+  .coin .face,.coin .label{position:absolute;inset:0;border-radius:18px;display:grid;place-items:center;backface-visibility:hidden;transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+  .coin .face{background:var(--green);color:var(--green-ink);font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:56px;box-shadow:0 6px 0 var(--green-deep),inset 0 0 0 4px rgba(255,255,255,.25)}
+  .coin .label{background:var(--white);color:var(--green-ink);transform:rotateY(180deg);padding:14px;text-align:center;font-weight:600;font-size:15px;line-height:1.3;border:2px solid var(--lime);box-shadow:0 6px 0 var(--green-deep)}
+  .coin .label b{display:block;color:var(--green-deep);font-weight:800;font-size:17px;margin-bottom:2px}
+  .coin.on .face{transform:rotateY(180deg)}
+  .coin.on .label{transform:rotateY(0)}
+  .coin:not(.on):hover .face{transform:translateY(-2px)}
+  .reveal{margin-top:16px;appearance:none;background:none;border:0;color:var(--lime);font:inherit;font-weight:700;font-size:15px;cursor:pointer;text-decoration:underline;text-underline-offset:4px;padding:6px 0}
+  @media (min-width:520px){.coins{grid-template-columns:repeat(4,1fr)}}
+    .for .not{margin-top:26px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.75)}
+  .for .not b{color:var(--white)}
+
+  /* how */
+  .steps{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:14px}
+  .steps li{display:grid;grid-template-columns:56px 1fr;gap:16px;align-items:start;background:var(--white);border:2px solid var(--green-ink);border-radius:var(--r);padding:18px}
+  .steps .n{width:56px;height:56px;border-radius:12px;background:var(--green);color:var(--green-ink);display:grid;place-items:center;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:28px}
+  .steps h3{font-size:22px;margin-bottom:4px}
+  .steps p{color:#2F4038}
+  .steps .t{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:var(--green-deep);background:rgba(18,184,95,.12);padding:4px 10px;border-radius:999px}
+
+  /* FAQ */
+  .faq{background:var(--white)}
+  .faq details{border:2px solid var(--green-ink);border-radius:14px;margin-bottom:10px;background:var(--paper);overflow:hidden}
+  .faq details[open]{background:var(--white);box-shadow:6px 6px 0 var(--green)}
+  .faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 18px;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:19px;line-height:1.15;letter-spacing:-.01em}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";flex:none;width:32px;height:32px;border-radius:9px;background:var(--green);color:var(--white);display:grid;place-items:center;font-family:Figtree,sans-serif;font-weight:700;font-size:22px;transition:transform .2s}
+  .faq details[open] summary::after{transform:rotate(45deg)}
+  .faq .body{padding:0 18px 18px;color:#2F4038}
+  .faq .body p+p{margin-top:10px}
+  .faq .body a{color:var(--green-deep);font-weight:700}
+
+  /* about */
+  .about{display:grid;gap:18px}
+  .about .photo{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:var(--r);border:2px solid var(--green-ink);box-shadow:8px 8px 0 var(--green);display:block}
+  .about .more{color:var(--green-deep);font-weight:700;text-decoration:none;border-bottom:2px solid var(--green)}
+  .about p+p{margin-top:12px}
+  .about .quote{margin-top:18px;padding:18px;border-left:6px solid var(--green);background:var(--white);font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:22px;line-height:1.15}
+  .socials{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .socials a{text-decoration:none;font-weight:700;font-size:15px;color:var(--green-ink);background:var(--white);border:2px solid var(--green-ink);border-radius:999px;padding:9px 16px}
+
+  /* book */
+  .book{background:var(--green);color:var(--white)}
+  .book h2{color:var(--white)}
+  .book h2 span{color:var(--green-ink)}
+  .book .lead{color:rgba(255,255,255,.92)}
+  .embed{background:rgba(6,45,25,.35);border:2px dashed rgba(255,255,255,.6);border-radius:14px;padding:28px 18px;text-align:center;font-weight:600;font-size:15px;margin-bottom:16px}
+  .book .btn{background:var(--green-ink);box-shadow:0 8px 0 #000}
+
+  footer{background:#041A0E;color:rgba(255,255,255,.62);font-size:13px;line-height:1.6;padding:28px 0 36px}
+  footer p+p{margin-top:12px}
+  footer .ph{border:1px dashed rgba(182,245,122,.6);border-radius:10px;padding:12px 14px;color:var(--lime)}
+  footer a{color:rgba(255,255,255,.85)}
+
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px var(--pad) calc(12px + env(safe-area-inset-bottom));background:linear-gradient(to top,rgba(244,248,242,1) 60%,rgba(244,248,242,0))}
+  .sticky .btn{max-width:var(--col);margin:0 auto}
+
+  @media (min-width:720px){
+    .sticky{display:none}
+    footer{padding-bottom:36px}
+    .hero{padding:72px 0 64px}
+    .hero .row{flex-direction:row}.hero .row .btn{width:auto;min-width:240px}
+    section{padding:72px 0}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/logo.png" alt="Matty F Money" class="logo-sm"></a>
+    <a class="cta" href="#book">Book 15 min</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="kicker"><span>Life insurance for people who</span><span>hate talking about life insurance</span></div>
+      <h1>Protect the people <span>who count <em class="mark">on you.</em></span></h1>
+      <p class="sub">If something happened to you tomorrow, would the people you love be okay? That's the whole question.<br>Fifteen minutes, and we answer it together.</p>
+      <div class="row">
+        <a class="btn btn-dark" href="#book">Book a free 15-minute call</a>
+        <a class="btn btn-ghost" href="#faq">Read the FAQ first</a>
+      </div>
+      <p class="fine">No pitch. No pressure. Just a real conversation about the people who count on you.</p>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="track">
+      <span>Matty F Money</span><span>&bull;</span><span>No Pitch</span><span>&bull;</span><span>No Pressure</span><span>&bull;</span><span>No Homework</span><span>&bull;</span><span>Straight Answers</span><span>&bull;</span><span>Chicago</span><span>&bull;</span><span>15 Minutes</span><span>&bull;</span>
+      <span>Matty F Money</span><span>&bull;</span><span>No Pitch</span><span>&bull;</span><span>No Pressure</span><span>&bull;</span><span>No Homework</span><span>&bull;</span><span>Straight Answers</span><span>&bull;</span><span>Chicago</span><span>&bull;</span><span>15 Minutes</span><span>&bull;</span>
+    </div>
+  </div>
+
+  <section id="what">
+    <div class="wrap">
+      <h2>What I <span class="hl">actually</span> do</h2>
+      <p class="lead">Three things. One call.<br>You bring the questions, I bring the answers.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="num">01</div>
+          <h3>Figure out your real number</h3>
+          <p>Not a rule of thumb. What your income would need to replace, for how long, plus what you'd want paid off. Rent, mortgage, kids, the works.</p>
+        </article>
+        <article class="card">
+          <div class="num">02</div>
+          <h3>Pick the right kind of coverage</h3>
+          <p>Term, whole life, or a mix. I'll show you how each one works, what it costs, and what it does for you while you're alive, not just after.</p>
+        </article>
+        <article class="card">
+          <div class="num">03</div>
+          <h3>Set it up and forget it</h3>
+          <p>I handle the application and the paperwork. You get a policy that fits, a beneficiary that's correct, and a check-in when life changes.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="for" id="who">
+    <div class="wrap">
+      <h2>Who this is <span style="color:var(--lime)">for</span></h2>
+      <p class="lead">Eight kinds of people I talk to every week. If one of them is you, we should talk.</p>
+      <p class="hint">Tap a coin.</p>
+<div class="coins" id="coins">
+<button class="coin" type="button"><span class="face">$</span><span class="label"><b>New parent</b> with nothing set up yet</span></button>
+<button class="coin" type="button"><span class="face">$</span><span class="label"><b>Renter</b> who thinks this isn't for them</span></button>
+<button class="coin" type="button"><span class="face">$</span><span class="label"><b>Earning well,</b> still winging it</span></button>
+<button class="coin" type="button"><span class="face">$</span><span class="label"><b>Just bought</b> a place</span></button>
+<button class="coin" type="button"><span class="face">$</span><span class="label"><b>Only coverage</b> is through work</span></button>
+<button class="coin" type="button"><span class="face">$</span><span class="label"><b>Married,</b> one income carries it</span></button>
+<button class="coin" type="button"><span class="face">$</span><span class="label"><b>Self-employed</b> or 1099</span></button>
+<button class="coin" type="button"><span class="face">$</span><span class="label"><b>Told "you're too young"</b> for this</span></button>
+</div>
+<button class="reveal" type="button" id="revealAll">Flip them all</button>
+      <p class="not"><b>Not for you if:</b> you want someone to tell you what to buy in a DM without knowing anything about you. I don't work that way, and you shouldn't want me to.</p>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <h2>How it <span class="hl">works</span></h2>
+      <p class="lead">Three steps. The first one is fifteen minutes, on the phone or video.</p>
+      <ol class="steps">
+        <li>
+          <div class="n">1</div>
+          <div><h3>Real talk</h3><p>Who counts on you, what you've got, what you've been putting off. Fifteen minutes and you'll know what matters now and what can wait.</p><span class="t">15 minutes</span></div>
+        </li>
+        <li>
+          <div class="n">2</div>
+          <div><h3>I do the homework</h3><p>You get the whole picture on one page. Your number, a couple of real options, and what each one actually runs you a month. No binder, no guessing.</p><span class="t">A few days</span></div>
+        </li>
+        <li>
+          <div class="n">3</div>
+          <div><h3>Done. You're covered.</h3><p>You pick, I handle the paperwork. Then we check in once a year, or whenever life throws you something new.</p><span class="t">Handled</span></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <h2>Questions I get <span class="hl">every week</span></h2>
+      <p class="lead">Tap one. Straight answers, no runaround.</p>
+
+      <details>
+        <summary>Do I actually need life insurance?</summary>
+        <div class="body">
+          <p>If someone would be in a worse spot financially if your income stopped, yes. A partner, kids, a parent you help, a co-signer on a loan. If nobody depends on you, you may not need it yet, and I'll tell you that.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Term vs. whole life. What's the difference?</summary>
+        <div class="body">
+          <p>Term covers you for a set number of years and then ends. Cheap, simple, does one job. Whole life covers you for life and builds cash value you can use along the way. It costs more because it does more.</p>
+          <p>A lot of people end up with some of each. The mix depends on your age, your family, and what you want the money to do.</p>
+        </div>
+      </details>
+      <details>
+        <summary>How much coverage do I need?</summary>
+        <div class="body">
+          <p>Start with your income, how many years it would need to be replaced, and what you'd want paid off. That gives a real number. "Ten times your salary" is a starting point, not an answer; two people with the same salary can need very different amounts.</p>
+          <p><a href="#book">We'll figure out your number on the call.</a></p>
+        </div>
+      </details>
+      <details>
+        <summary>I have coverage through work. Isn't that enough?</summary>
+        <div class="body">
+          <p>Usually not. Group coverage is often one or two times salary, and it typically ends when the job does. It's a nice bonus, not a plan.</p>
+        </div>
+      </details>
+      <details>
+        <summary>What is cash value?</summary>
+        <div class="body">
+          <p>The part of a permanent policy that grows over time and belongs to you. You can borrow against it or use it while you're alive. It's a long game and it's not the right tool for everyone. Anyone who tells you it always is or never is isn't giving you the full picture.</p>
+        </div>
+      </details>
+      <details>
+        <summary>I rent. Does this apply to me?</summary>
+        <div class="body">
+          <p>Yes. Coverage isn't about owning a home. It's about who depends on your income. If someone does, this applies.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Am I too young to worry about this?</summary>
+        <div class="body">
+          <p>Coverage is priced on age and health. The younger and healthier you are when you set it up, the less it costs, and you lock that in. Waiting rarely makes it cheaper.</p>
+        </div>
+      </details>
+      <details>
+        <summary>What does it cost to work with you?</summary>
+        <div class="body">
+          <p>The call is free. If you set up a policy, I'm paid by the insurance company, not by you writing me a check. I'll explain exactly how that works before you decide anything.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Will you pressure me?</summary>
+        <div class="body">
+          <p>No. If the plan is right, it'll still be right next week. I spent ten years in real estate watching people get pushed into decisions. I don't do that.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>Hey, I'm <span class="hl">Matty</span></h2>
+      <div class="about">
+        <img class="photo" src="assets/matty.jpg" alt="Matty in a green suit">
+        <div>
+          <p>Twenty years in sales. The last ten building a luxury rental business in Chicago, and I'm still building it. Now I'm joining my dad's 25-year financial practice with the plan to take it over, because helping a family protect what they've got beats helping them find a nicer kitchen.</p>
+          <p style="margin-top:18px"><a class="btn btn-dark" style="width:auto;padding:14px 22px;font-size:16px" href="https://www.mattyv3rse.com/story.html" target="_blank" rel="noopener">Read my story</a></p>
+                  </div>
+      </div>
+      <div class="socials" aria-label="Social links">
+        <a href="#">Instagram</a><a href="#">TikTok</a><a href="#">X</a><a href="#">YouTube</a><a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="book" id="book">
+    <div class="wrap">
+      <h2>Fifteen minutes. <span>Let's go.</span></h2>
+      <p class="lead">Pick a time. Phone or video, your call. You'll leave with your number and your next step.</p>
+      <div class="embed">Scheduler embed goes here (firm-approved booking tool).</div>
+      <a class="btn" href="#">Book a free 15-minute call</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/logo.png" alt="Matty F Money" class="logo-ft">
+    <p class="ph">Compliance footer placeholder: legal name, firm and agency affiliation, state insurance license numbers, required disclosures, and review code go here once approved.</p>
+    <p>Matty F Money is a personal brand. Nothing on this page is a promise about future results or an offer of any specific product. Coverage, cost, and availability depend on your situation and the carrier's underwriting. This is general information, not tax or legal advice.</p>
+    <p>&copy; 2026 Matty F Money &nbsp;&nbsp; <a href="#">Privacy</a></p>
+  </div>
+</footer>
+
+
+<script>
+  document.querySelectorAll('.coin').forEach(function(c){c.addEventListener('click',function(){c.classList.toggle('on')})});
+  var all=document.getElementById('revealAll');
+  all.addEventListener('click',function(){
+    var coins=document.querySelectorAll('.coin');var anyOff=[].some.call(coins,function(c){return !c.classList.contains('on')});
+    coins.forEach(function(c,i){setTimeout(function(){c.classList.toggle('on',anyOff)},i*70)});
+    all.textContent=anyOff?'Flip them back':'Flip them all';
+  });
+</script>
+</body>
+</html>
