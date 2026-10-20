@@ -124,11 +124,11 @@
   .about{display:grid;gap:24px}
   .about .photo{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:12px;display:block;box-shadow:0 20px 40px -20px rgba(6,46,24,.45)}
   .about p+p{margin-top:12px}
-  .about .row{display:flex;gap:12px;margin-top:22px;align-items:stretch}
+  .about .row{display:flex;gap:16px;margin-top:22px;align-items:center}
   .about .row .btn{width:auto;flex:1;padding:14px 18px;font-size:15px}
-  .about .ig{flex:none;width:54px;padding:0;display:inline-grid;place-items:center;background:#fff;border:1px solid var(--line);border-radius:8px;text-decoration:none;color:var(--green);font-weight:600;overflow:hidden}
-  .about .ig:hover{background:var(--green-tint)}
-  .about .ig img{width:30px;height:30px;object-fit:contain;display:block}
+  .about .ig{flex:none;padding:4px;display:inline-grid;place-items:center;background:none;border:0;text-decoration:none;color:var(--green);font-weight:600;transition:transform .15s ease,opacity .15s ease}
+  .about .ig:hover{transform:scale(1.08);opacity:.85}
+  .about .ig img{width:36px;height:36px;object-fit:contain;display:block}
   .about .ig img+span{display:none}
   .about .tag{margin-top:24px;font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-size:23px;color:var(--green);padding-left:16px;border-left:3px solid var(--green)}
 
@@ -309,11 +309,11 @@
       <div class="about">
         <img class="photo" src="/assets/matty.jpg" alt="Matt Friedman">
         <div>
-          <p>Twenty years in sales. The last ten in luxury apartment leasing in Chicago: more than a thousand leases, which is really a thousand people making a big financial decision.</p>
-          <p>Now I've joined my dad's practice with the plan to take it over. I bring the attention and the follow-through. He brings 25 years of doing this the right way. You get both.</p>
+          <p>I'm Matt. I've spent twenty years in sales, the last ten leasing luxury apartments in Chicago. More than a thousand leases taught me something simple: most people make big money decisions without anyone slowing down to walk them through it.</p>
+          <p>That's what I do now. I work alongside my dad, who has spent 25 years helping families protect and organize their money, and I'm building the practice to carry it forward. I listen first, explain things in plain English, and let you decide at your own pace.</p>
           <div class="row">
-            <a class="btn" href="https://mattyv3rse.com" target="_blank" rel="noopener">The full story at mattyv3rse.com</a>
-            <a class="ig" href="https://www.instagram.com/mattyfmoney" target="_blank" rel="noopener" aria-label="Matty F Money on Instagram" title="@mattyfmoney"><img src="/assets/instagram.png" alt="" onerror="this.remove()"><span>IG</span></a>
+            <a class="btn" href="https://mattyv3rse.com" target="_blank" rel="noopener">The Full Story Here</a>
+            <a class="ig" href="https://www.instagram.com/mattyfmoney" target="_blank" rel="noopener" aria-label="Matty F Money on Instagram" title="@mattyfmoney"><img src="/assets/instagram-glyph.png" alt="" onerror="this.remove()"><span>IG</span></a>
           </div>
           <p class="tag">Real advice. Better decisions.</p>
         </div>
