@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <meta name="robots" content="noindex, nofollow">
-<title>Matty F Money | Real advice. Better decisions.</title>
+<title>Matt Friedman | Real advice. Better decisions.</title>
 <meta name="description" content="Book a free first meeting with Matt Friedman in Chicago. A clear, step-by-step approach to protecting and organizing your money.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -56,6 +56,7 @@
   .hero .sub{margin:24px auto 32px;font-size:19px;color:var(--text);max-width:44ch}
   .hero .row{display:flex;flex-direction:column;gap:12px;max-width:440px;margin:0 auto}
   .hero .fine{margin-top:20px;font-size:14px;color:var(--muted)}
+  .hero-photo,.only-wide{display:none}
 
   section{padding:64px 0}
   .h{display:inline-block;margin-bottom:14px}
@@ -74,9 +75,11 @@
   .who::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.08),transparent);pointer-events:none}
   .who h2{color:#fff}.who .h::after{background:#8FCF9F}
   .who .lead{color:rgba(255,255,255,.72)}
-  .who ul{list-style:none;padding:0;margin:0;display:grid;gap:12px;position:relative}
-  .who li{padding:14px 16px 14px 44px;position:relative;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;font-weight:500}
-  .who li::before{content:"";position:absolute;left:16px;top:20px;width:14px;height:14px;border-radius:50%;background:#8FCF9F;box-shadow:0 0 0 4px rgba(143,207,159,.2)}
+  .aud{display:grid;gap:16px;position:relative}
+  .aud article{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:28px 26px}
+  .aud h3{color:#fff;font-size:26px;margin-bottom:10px}
+  .aud .roles{color:#A9DDB6;font-weight:500;margin-bottom:12px}
+  .aud p{color:rgba(255,255,255,.84)}
   .who .not{margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.72)}
   .who .not b{color:#fff;font-weight:600}
 
@@ -126,11 +129,7 @@
   .about p+p{margin-top:12px}
   .about .row{display:flex;gap:16px;margin-top:22px;align-items:center}
   .about .row .btn{width:auto;flex:1;padding:14px 18px;font-size:15px}
-  .about .ig{flex:none;padding:4px;display:inline-grid;place-items:center;background:none;border:0;text-decoration:none;color:var(--green);font-weight:600;transition:transform .15s ease,opacity .15s ease}
-  .about .ig:hover{transform:scale(1.08);opacity:.85}
-  .about .ig img{width:36px;height:36px;object-fit:contain;display:block}
-  .about .ig img+span{display:none}
-  .about .tag{margin-top:24px;font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-size:23px;color:var(--green);padding-left:16px;border-left:3px solid var(--green)}
+  .tag{margin-top:24px;font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-size:23px;color:var(--green);padding-left:16px;border-left:3px solid var(--green)}
 
   /* book */
   .book{background:linear-gradient(160deg,var(--green) 0%,var(--green-deep) 100%);color:#fff;text-align:center}
@@ -160,13 +159,44 @@
     .hero .row{flex-direction:row;max-width:none;justify-content:center}.hero .row .btn{width:auto;min-width:240px}
     section{padding:84px 0}
     .items{grid-template-columns:repeat(3,1fr);gap:20px}
-    .who ul{grid-template-columns:1fr 1fr;gap:12px 14px}
+    .aud{grid-template-columns:1fr 1fr;gap:20px}
     .about{grid-template-columns:1fr}
     .book .btn{width:auto;min-width:280px}
   }
+  /* desktop: wide layout, mobile untouched */
   @media (min-width:980px){
-    header .wrap{max-width:1040px}
+    :root{--col:1160px;--pad:40px}
+    header .wrap{max-width:var(--col)}
     header nav{display:flex}
+    .only-wide{display:block}
+    .only-narrow,.about .photo.only-narrow{display:none}
+
+    .hero{text-align:left;padding:84px 0 100px}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,.78fr);gap:64px;align-items:center}
+    .hero h1{margin:0;max-width:none;font-size:clamp(44px,4.1vw,56px)}
+    .hero .sub{margin:26px 0 34px;font-size:20px}
+    .hero .row{justify-content:flex-start}
+    .hero-photo{display:block;margin:0;position:relative}
+    .hero-photo::before{content:"";position:absolute;top:30px;left:30px;right:-22px;bottom:14px;border-radius:18px;background:var(--green);opacity:.14}
+    .hero-photo img{position:relative;display:block;width:100%;aspect-ratio:4/4.7;object-fit:cover;object-position:57% 50%;border-radius:18px;box-shadow:0 34px 60px -34px rgba(6,46,24,.6)}
+    .hero-photo figcaption{position:relative;margin-top:16px;font-size:14px;color:var(--muted)}
+
+    section{padding:104px 0}
+    h2{font-size:44px}
+    .lead{font-size:18px}
+    .split{display:grid;grid-template-columns:390px minmax(0,1fr);gap:72px;align-items:start}
+    .split-head{position:sticky;top:136px}
+    .split-head .lead{margin-bottom:0}
+    .item{padding:32px 30px}
+    .process div{padding:26px 24px}
+    .process-foot{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:40px}
+    .process-foot .note,.process-foot .team{margin-top:0}
+    .process-foot .note{font-size:17px}
+    .aud article{padding:36px 34px}
+    .about p{max-width:62ch}
+    .about .row .btn{flex:none;min-width:260px}
+    .split-head .tag{margin-top:28px;font-size:24px}
+    .book .wrap,footer .wrap{max-width:820px}
   }
 </style>
 </head>
@@ -174,7 +204,7 @@
 
 <header>
   <div class="wrap">
-    <a href="#top" aria-label="Matty F Money home"><img class="logo" src="/assets/logo.png" alt="Matty F Money"></a>
+    <a href="#top" aria-label="Home"><img class="logo" src="/assets/logo.png" alt="Matty F Money"></a>
     <nav aria-label="Sections">
       <a href="#process">How we plan</a>
       <a href="#first-meeting">First meeting</a>
@@ -188,14 +218,20 @@
 <main id="top">
 
   <section class="hero">
-    <div class="wrap">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
       <h1>Snap your fingers and change one thing about <span class="u">your money.<svg viewBox="0 0 200 22" preserveAspectRatio="none" aria-hidden="true"><path d="M3 15 C 30 9, 62 13, 96 10 S 160 6, 197 11" fill="none" stroke="#0E6234" stroke-width="6" stroke-linecap="round"/><path d="M6 17 C 40 14, 90 16, 130 13 S 175 11, 194 14" fill="none" stroke="#0E6234" stroke-width="3" stroke-linecap="round" opacity=".85"/></svg></span> <span class="g">What would it be?</span></h1>
       <p class="sub">That's the first question I ask everyone I sit down with. Your answer is where your plan starts, and we build it in the right order.</p>
       <div class="row">
         <a class="btn" href="#book">Book your free first meeting</a>
         <a class="btn btn-outline" href="#first-meeting">See what happens first</a>
       </div>
-      <p class="fine">Free. No pressure. Zoom or in person in Chicago.</p>
+      <p class="fine">For independent earners and growing families. Free, no pressure, Zoom or in person in Chicago.</p>
+      </div>
+      <figure class="hero-photo">
+        <img src="/assets/matty.jpg" alt="Matt Friedman seated on a bench in Chicago">
+        <figcaption>Matt Friedman, Chicago</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -205,9 +241,9 @@
       <p class="lead">Most people's money feels messy for the same three reasons.</p>
       <div class="items">
         <div class="item">
-          <span class="k">Everyone's selling</span>
+          <span class="k">Scattered</span>
           <h3>No one owns the plan</h3>
-          <p>An insurance guy, an investment guy, and HR telling you to open a 401(k). Everyone sells a product. Nobody looks at the whole picture.</p>
+          <p>An insurance guy, an investment guy, and HR telling you to open a 401(k). You have pieces in different places, and no one has helped you see them together.</p>
         </div>
         <div class="item">
           <span class="k">No order</span>
@@ -233,18 +269,22 @@
         <div><span>03</span><b>Liquidity</b><p>Cash on hand, so you're never forced into a bad decision.</p></div>
         <div><span>04</span><b>Debt</b><p>Good debt vs. bad debt, and turning payments into cash flow.</p></div>
       </div>
+      <div class="process-foot">
       <p class="note"><b>Short windows, not 30-year guesses.</b> We look three to five years out at a time. You see progress, we adjust as life changes, and you build from there.</p>
       <div class="team">
-        <p><b>You're not working with just me.</b> I work alongside my dad, Larry Friedman, who has spent more than 25 years building his practice across New York Life and MassMutual, today with WestPoint Financial Group, a MassMutual firm. One team, one conversation.</p>
+        <p><b>You're not working with just me.</b> I work alongside my dad, Larry Friedman, who has spent more than 25 years in this business, today with WestPoint Financial Group, a MassMutual firm. One team, one conversation.</p>
+      </div>
       </div>
     </div>
   </section>
 
   <section id="first-meeting">
-    <div class="wrap">
+    <div class="wrap split">
+      <div class="split-head">
       <div class="h"><h2>Your first meeting</h2></div>
       <p class="lead">Free, about an hour, Zoom or in person. No products, no applications, no homework.</p>
-      <ol class="steps">
+      </div>
+      <ol class="steps split-body">
         <li><div class="n">1</div><div><h3>We get to know you</h3><p>Why you booked, what's on your mind, and the one thing you'd change if you could snap your fingers.</p><span class="t">Most of the meeting</span></div></li>
         <li><div class="n">2</div><div><h3>Who we are and how we think</h3><p>A quick look at our team and why we plan differently than most.</p><span class="t">A few minutes</span></div></li>
         <li><div class="n">3</div><div><h3>Your goals for the next 3 years</h3><p>What matters most to you, and why. Those become what matters to us.</p><span class="t">The heart of it</span></div></li>
@@ -255,26 +295,31 @@
 
   <section class="who" id="who">
     <div class="wrap">
-      <div class="h"><h2>Who this is for</h2></div>
-      <p class="lead">If any of these sound like you, we should talk.</p>
-      <ul>
-        <li>Earning well and still winging it</li>
-        <li>New parents and growing families</li>
-        <li>People whose only coverage is through work</li>
-        <li>Anyone carrying debt they want gone</li>
-        <li>Self-employed and 1099 earners</li>
-        <li>Couples where one income carries the household</li>
-        <li>Renters and new homeowners</li>
-        <li>Anyone never told what order to do things in</li>
-      </ul>
+      <div class="h"><h2>Who I work with</h2></div>
+      <p class="lead">Two kinds of people, and plenty who are both.</p>
+      <div class="aud">
+        <article>
+          <h3>Independent earners</h3>
+          <p class="roles">Realtors, 1099 contractors, business owners and commission-based professionals.</p>
+          <p>Your income moves month to month, and there's no HR department setting up your benefits. Building the safety net is on you.</p>
+        </article>
+        <article>
+          <h3>Growing families</h3>
+          <p class="roles">New parents, new homeowners, and households where one income carries the load.</p>
+          <p>More people count on you than did a few years ago.</p>
+        </article>
+      </div>
       <p class="not"><b>Not for you if</b> you want someone to tell you what to buy in a DM without knowing anything about you. I don't work that way, and you shouldn't want me to.</p>
     </div>
   </section>
 
   <section class="faq" id="faq">
-    <div class="wrap">
+    <div class="wrap split">
+      <div class="split-head">
       <div class="h"><h2>Before you book</h2></div>
       <p class="lead">The questions people ask me most.</p>
+      </div>
+      <div class="split-body">
 
       <details><summary>What actually happens at the first meeting?</summary><div class="body">
         <p>Mostly, I listen. We talk about why you booked, what you'd change about your money, and your goals for the next few years. I'll share how we work. If you see value, we set up the next conversation. That's it.</p>
@@ -283,7 +328,7 @@
         <p>Not at the first meeting. There's nothing to buy and nothing to sign. Later on, if a product genuinely fits a goal you've told me about, I'll show you why and you decide.</p>
       </div></details>
       <details><summary>Is it really free? How do you get paid?</summary><div class="body">
-        <p>The meeting is free. If you decide to put coverage in place later, I'm paid by the insurance company, not by a check from you. I'll explain exactly how that works before you decide anything.</p>
+        <p>The meeting is free. If you later put coverage in place, I'm compensated through commissions on the products you choose. I'll explain how that works before you decide anything.</p>
       </div></details>
       <details><summary>I already have a financial advisor.</summary><div class="body">
         <p>Great, I'm happy to work alongside them. Nothing has to move.</p>
@@ -298,24 +343,27 @@
         <p>No. Bring your questions and an honest answer to the snap-your-fingers question. If we keep going, I'll tell you what's useful for next time.</p>
       </div></details>
       <details><summary>Will you pressure me?</summary><div class="body">
-        <p>No. If the plan is right, it'll still be right next week. I spent ten years in real estate watching people get pushed into decisions. I don't do that.</p>
+        <p>No. If something is right for you, it'll still be right next week. Twenty years in sales taught me people decide best when nobody is rushing them.</p>
       </div></details>
+      </div>
     </div>
   </section>
 
   <section class="about-s" id="about">
-    <div class="wrap">
-      <div class="h"><h2>About Matt</h2></div>
-      <div class="about">
-        <img class="photo" src="/assets/matty.jpg" alt="Matt Friedman">
+    <div class="wrap split">
+      <div class="split-head">
+        <div class="h"><h2>About Matt</h2></div>
+        <p class="tag only-wide">Real advice. Better decisions.</p>
+      </div>
+      <div class="split-body about">
+        <img class="photo only-narrow" src="/assets/matty.jpg" alt="Matt Friedman">
         <div>
-          <p>I'm Matt. I've spent twenty years in sales, the last ten leasing luxury apartments in Chicago and Miami. More than a thousand leases taught me something simple: most people make big money decisions without anyone slowing down to walk them through it.</p>
-          <p>That's what I do now. I work alongside my dad, who has spent 25 years helping families protect and organize their money, and I'm building the practice to carry it forward. I listen first, explain things in simple language, and let you decide at your own pace.</p>
+          <p>I'm Matt. I've spent twenty years in sales, the last ten in luxury apartment leasing in Chicago. That's still my full-time work, and I still love it. More than a thousand leases showed me how often people make big money decisions with no one walking them through it.</p>
+          <p>Alongside my real estate career, I'm learning my dad's business with him. He has spent more than 25 years helping families protect and organize their money. I listen first, explain things in plain language, and let you decide at your own pace.</p>
           <div class="row">
             <a class="btn" href="https://mattyv3rse.com" target="_blank" rel="noopener">The Full Story Here</a>
-            <a class="ig" href="https://www.instagram.com/mattyfmoney" target="_blank" rel="noopener" aria-label="Matty F Money on Instagram" title="@mattyfmoney"><img src="/assets/instagram-glyph.png" alt="" onerror="this.remove()"><span>IG</span></a>
           </div>
-          <p class="tag">Real advice. Better decisions.</p>
+          <p class="tag only-narrow">Real advice. Better decisions.</p>
         </div>
       </div>
     </div>
@@ -325,7 +373,7 @@
     <div class="wrap">
       <div class="h"><h2>Book your first meeting</h2></div>
       <p class="lead">Pick a time that works. Zoom or in person in Chicago. Come with the one thing you'd change about your money, and we'll start there.</p>
-      <div class="embed">Scheduler embed goes here (firm-approved booking tool).</div>
+      <div class="embed">Zoom Scheduler goes here.</div>
       <a class="btn" href="#">Book your free first meeting</a>
     </div>
   </section>
@@ -335,9 +383,9 @@
 <footer>
   <div class="wrap">
     <img class="logo" src="/assets/logo-white.png" alt="Matty F Money">
-    <p class="ph">Compliance footer placeholder: legal name, firm and agency affiliation, state insurance license numbers, required disclosures, and review code go here once approved.</p>
-    <p>Matty F Money is a personal brand. Nothing on this page is a promise about future results or an offer of any specific product. Coverage, cost, and availability depend on your situation and the carrier's underwriting. This is general information, not tax, legal, or investment advice.</p>
-    <p>&copy; 2026 Matty F Money &nbsp;&nbsp; <a href="#">Privacy</a></p>
+    <p class="ph">Disclosure block pending: Matt Friedman, approved title, Illinois insurance license number, firm disclosure and review code go here.</p>
+    <p>Matty F Money is a personal brand of Matt Friedman. Nothing on this page is a promise about future results or an offer of any specific product. Coverage, cost, and availability depend on your situation and the carrier's underwriting. This is general information, not tax, legal, or investment advice.</p>
+    <p>&copy; 2026 Matt Friedman &nbsp;&nbsp; <a href="/privacy">Privacy</a></p>
   </div>
 </footer>
 
